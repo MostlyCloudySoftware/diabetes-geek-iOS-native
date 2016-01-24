@@ -27,13 +27,40 @@
                                             <constraint firstAttribute="width" constant="72" id="ren-SV-C8M"/>
                                         </constraints>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diabetes Geek" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAA-BY-0dZ">
+                                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="KAA-BY-0dZ" firstAttribute="centerX" secondItem="5tv-8c-DMo" secondAttribute="centerX" id="AF6-Lr-CRJ"/>
+                                    <constraint firstItem="KAA-BY-0dZ" firstAttribute="centerY" secondItem="5tv-8c-DMo" secondAttribute="centerY" id="Avx-Dw-fQo"/>
                                     <constraint firstItem="FdX-aG-9dx" firstAttribute="centerY" secondItem="5tv-8c-DMo" secondAttribute="centerY" id="MTX-HG-XjJ"/>
                                     <constraint firstAttribute="width" constant="240" id="eGV-bv-wQq"/>
                                     <constraint firstItem="FdX-aG-9dx" firstAttribute="centerX" secondItem="5tv-8c-DMo" secondAttribute="centerX" id="mgC-9R-pfP"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="KAA-BY-0dZ"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="AF6-Lr-CRJ"/>
+                                        <exclude reference="Avx-Dw-fQo"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="subviews">
+                                        <exclude reference="FdX-aG-9dx"/>
+                                        <include reference="KAA-BY-0dZ"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="AF6-Lr-CRJ"/>
+                                        <include reference="Avx-Dw-fQo"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="0oX-zH-3vb">
                                 <rect key="frame" x="200" y="240" width="200" height="120"/>
