@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="i33-or-HR7">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--LoginVC-->
+        <scene sceneID="vvZ-0a-4eo">
+            <objects>
+                <viewController id="i33-or-HR7" customClass="LoginVC" customModule="DiabetesGeek" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GUt-qc-WqY"/>
+                        <viewControllerLayoutGuide type="bottom" id="xno-Kk-3iz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ach-3D-IG8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DiabetesGeekIconTemp" translatesAutoresizingMaskIntoConstraints="NO" id="FdX-aG-9dx">
+                                <rect key="frame" x="264" y="93" width="72" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="Vcl-b2-n5h"/>
+                                    <constraint firstAttribute="width" constant="72" id="ren-SV-C8M"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="0oX-zH-3vb">
+                                <rect key="frame" x="200" y="240" width="200" height="120"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4s8-bt-X4Y" userLabel="Username">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="59"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gXd-yV-Iqy" userLabel="Password">
+                                        <rect key="frame" x="0.0" y="60" width="200" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="eqB-ZA-E4v"/>
+                                    <constraint firstAttribute="width" constant="200" id="u0N-Cx-CU1"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7dw-WR-wYG">
+                                <rect key="frame" x="281" y="414" width="38" height="30"/>
+                                <state key="normal" title="Login"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0oX-zH-3vb" firstAttribute="centerX" secondItem="Ach-3D-IG8" secondAttribute="centerX" id="1I4-9L-t5T"/>
+                            <constraint firstItem="0oX-zH-3vb" firstAttribute="centerX" secondItem="FdX-aG-9dx" secondAttribute="centerX" id="A9O-Ww-BZd"/>
+                            <constraint firstItem="0oX-zH-3vb" firstAttribute="top" secondItem="FdX-aG-9dx" secondAttribute="bottom" constant="100" id="Kxb-eb-3N4"/>
+                            <constraint firstItem="0oX-zH-3vb" firstAttribute="top" secondItem="FdX-aG-9dx" secondAttribute="bottom" constant="100" id="Lmk-51-1wL"/>
+                            <constraint firstItem="7dw-WR-wYG" firstAttribute="top" secondItem="0oX-zH-3vb" secondAttribute="bottom" constant="54" id="Os5-OE-ZMF">
+                                <variation key="heightClass=compact-widthClass=compact" constant="25"/>
+                            </constraint>
+                            <constraint firstItem="0oX-zH-3vb" firstAttribute="centerY" secondItem="Ach-3D-IG8" secondAttribute="centerY" id="OzO-uj-cCG"/>
+                            <constraint firstItem="0oX-zH-3vb" firstAttribute="leading" secondItem="Ach-3D-IG8" secondAttribute="leading" constant="150" id="UbE-s7-fRx"/>
+                            <constraint firstItem="0oX-zH-3vb" firstAttribute="top" secondItem="FdX-aG-9dx" secondAttribute="bottom" constant="100" id="WZa-MW-L3L">
+                                <variation key="heightClass=compact-widthClass=regular" constant="5"/>
+                            </constraint>
+                            <constraint firstItem="0oX-zH-3vb" firstAttribute="top" secondItem="Ach-3D-IG8" secondAttribute="top" constant="240" id="Wj0-40-cUR"/>
+                            <constraint firstItem="0oX-zH-3vb" firstAttribute="top" secondItem="FdX-aG-9dx" secondAttribute="bottom" constant="75" id="Xoj-9f-Y7R"/>
+                            <constraint firstItem="FdX-aG-9dx" firstAttribute="centerX" secondItem="Ach-3D-IG8" secondAttribute="centerX" id="adS-Od-FRs"/>
+                            <constraint firstItem="0oX-zH-3vb" firstAttribute="top" secondItem="FdX-aG-9dx" secondAttribute="bottom" priority="999" constant="100" id="bHG-o9-CKX">
+                                <variation key="heightClass=compact-widthClass=regular" constant="5"/>
+                            </constraint>
+                            <constraint firstItem="7dw-WR-wYG" firstAttribute="centerX" secondItem="Ach-3D-IG8" secondAttribute="centerX" id="fxX-Im-dNc"/>
+                            <constraint firstItem="0oX-zH-3vb" firstAttribute="top" secondItem="FdX-aG-9dx" secondAttribute="bottom" constant="100" id="gpd-rt-ip7">
+                                <variation key="heightClass=compact" constant="5"/>
+                            </constraint>
+                            <constraint firstItem="4s8-bt-X4Y" firstAttribute="top" secondItem="FdX-aG-9dx" secondAttribute="bottom" constant="100" id="mbq-sy-OiQ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="A9O-Ww-BZd"/>
+                                <exclude reference="Kxb-eb-3N4"/>
+                                <exclude reference="Lmk-51-1wL"/>
+                                <exclude reference="UbE-s7-fRx"/>
+                                <exclude reference="WZa-MW-L3L"/>
+                                <exclude reference="Wj0-40-cUR"/>
+                                <exclude reference="bHG-o9-CKX"/>
+                                <exclude reference="gpd-rt-ip7"/>
+                                <exclude reference="mbq-sy-OiQ"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="Xoj-9f-Y7R"/>
+                                <include reference="gpd-rt-ip7"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="Lmk-51-1wL"/>
+                                <include reference="WZa-MW-L3L"/>
+                                <exclude reference="Xoj-9f-Y7R"/>
+                                <exclude reference="bHG-o9-CKX"/>
+                                <exclude reference="mbq-sy-OiQ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JDB-g7-OvN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="365" y="367"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="DiabetesGeekIconTemp" width="72" height="72"/>
+    </resources>
+</document>
