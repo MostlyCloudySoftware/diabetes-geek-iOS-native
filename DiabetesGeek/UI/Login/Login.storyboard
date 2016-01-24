@@ -17,13 +17,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DiabetesGeekIconTemp" translatesAutoresizingMaskIntoConstraints="NO" id="FdX-aG-9dx">
-                                <rect key="frame" x="264" y="93" width="72" height="72"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5tv-8c-DMo" userLabel="ImageVerticalCenteringView">
+                                <rect key="frame" x="180" y="20" width="240" height="220"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DiabetesGeekIconTemp" translatesAutoresizingMaskIntoConstraints="NO" id="FdX-aG-9dx">
+                                        <rect key="frame" x="84" y="74" width="72" height="72"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="72" id="Vcl-b2-n5h"/>
+                                            <constraint firstAttribute="width" constant="72" id="ren-SV-C8M"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="72" id="Vcl-b2-n5h"/>
-                                    <constraint firstAttribute="width" constant="72" id="ren-SV-C8M"/>
+                                    <constraint firstItem="FdX-aG-9dx" firstAttribute="centerY" secondItem="5tv-8c-DMo" secondAttribute="centerY" id="MTX-HG-XjJ"/>
+                                    <constraint firstAttribute="width" constant="240" id="eGV-bv-wQq"/>
+                                    <constraint firstItem="FdX-aG-9dx" firstAttribute="centerX" secondItem="5tv-8c-DMo" secondAttribute="centerX" id="mgC-9R-pfP"/>
                                 </constraints>
-                            </imageView>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="0oX-zH-3vb">
                                 <rect key="frame" x="200" y="240" width="200" height="120"/>
                                 <subviews>
@@ -51,57 +62,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="0oX-zH-3vb" firstAttribute="centerX" secondItem="Ach-3D-IG8" secondAttribute="centerX" id="1I4-9L-t5T"/>
-                            <constraint firstItem="0oX-zH-3vb" firstAttribute="centerX" secondItem="FdX-aG-9dx" secondAttribute="centerX" id="A9O-Ww-BZd"/>
-                            <constraint firstItem="0oX-zH-3vb" firstAttribute="top" secondItem="FdX-aG-9dx" secondAttribute="bottom" constant="100" id="Kxb-eb-3N4"/>
-                            <constraint firstItem="0oX-zH-3vb" firstAttribute="top" secondItem="FdX-aG-9dx" secondAttribute="bottom" constant="100" id="Lmk-51-1wL"/>
+                            <constraint firstItem="5tv-8c-DMo" firstAttribute="top" secondItem="GUt-qc-WqY" secondAttribute="bottom" id="6ov-s2-fOD"/>
+                            <constraint firstItem="5tv-8c-DMo" firstAttribute="centerX" secondItem="Ach-3D-IG8" secondAttribute="centerX" id="Gzk-Tf-lxo"/>
                             <constraint firstItem="7dw-WR-wYG" firstAttribute="top" secondItem="0oX-zH-3vb" secondAttribute="bottom" constant="54" id="Os5-OE-ZMF">
                                 <variation key="heightClass=compact-widthClass=compact" constant="25"/>
                             </constraint>
                             <constraint firstItem="0oX-zH-3vb" firstAttribute="centerY" secondItem="Ach-3D-IG8" secondAttribute="centerY" id="OzO-uj-cCG"/>
-                            <constraint firstItem="0oX-zH-3vb" firstAttribute="leading" secondItem="Ach-3D-IG8" secondAttribute="leading" constant="150" id="UbE-s7-fRx"/>
-                            <constraint firstItem="0oX-zH-3vb" firstAttribute="top" secondItem="FdX-aG-9dx" secondAttribute="bottom" constant="100" id="WZa-MW-L3L">
-                                <variation key="heightClass=compact-widthClass=regular" constant="5"/>
-                            </constraint>
-                            <constraint firstItem="0oX-zH-3vb" firstAttribute="top" secondItem="Ach-3D-IG8" secondAttribute="top" constant="240" id="Wj0-40-cUR"/>
-                            <constraint firstItem="0oX-zH-3vb" firstAttribute="top" secondItem="FdX-aG-9dx" secondAttribute="bottom" constant="75" id="Xoj-9f-Y7R"/>
-                            <constraint firstItem="FdX-aG-9dx" firstAttribute="centerX" secondItem="Ach-3D-IG8" secondAttribute="centerX" id="adS-Od-FRs"/>
-                            <constraint firstItem="0oX-zH-3vb" firstAttribute="top" secondItem="FdX-aG-9dx" secondAttribute="bottom" priority="999" constant="100" id="bHG-o9-CKX">
-                                <variation key="heightClass=compact-widthClass=regular" constant="5"/>
-                            </constraint>
                             <constraint firstItem="7dw-WR-wYG" firstAttribute="centerX" secondItem="Ach-3D-IG8" secondAttribute="centerX" id="fxX-Im-dNc"/>
-                            <constraint firstItem="0oX-zH-3vb" firstAttribute="top" secondItem="FdX-aG-9dx" secondAttribute="bottom" constant="100" id="gpd-rt-ip7">
-                                <variation key="heightClass=compact" constant="5"/>
-                            </constraint>
-                            <constraint firstItem="4s8-bt-X4Y" firstAttribute="top" secondItem="FdX-aG-9dx" secondAttribute="bottom" constant="100" id="mbq-sy-OiQ"/>
+                            <constraint firstItem="0oX-zH-3vb" firstAttribute="top" secondItem="5tv-8c-DMo" secondAttribute="bottom" id="qtv-wS-wZL"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="A9O-Ww-BZd"/>
-                                <exclude reference="Kxb-eb-3N4"/>
-                                <exclude reference="Lmk-51-1wL"/>
-                                <exclude reference="UbE-s7-fRx"/>
-                                <exclude reference="WZa-MW-L3L"/>
-                                <exclude reference="Wj0-40-cUR"/>
-                                <exclude reference="bHG-o9-CKX"/>
-                                <exclude reference="gpd-rt-ip7"/>
-                                <exclude reference="mbq-sy-OiQ"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=compact">
-                            <mask key="constraints">
-                                <exclude reference="Xoj-9f-Y7R"/>
-                                <include reference="gpd-rt-ip7"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=compact-widthClass=regular">
-                            <mask key="constraints">
-                                <exclude reference="Lmk-51-1wL"/>
-                                <include reference="WZa-MW-L3L"/>
-                                <exclude reference="Xoj-9f-Y7R"/>
-                                <exclude reference="bHG-o9-CKX"/>
-                                <exclude reference="mbq-sy-OiQ"/>
-                            </mask>
-                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JDB-g7-OvN" userLabel="First Responder" sceneMemberID="firstResponder"/>
