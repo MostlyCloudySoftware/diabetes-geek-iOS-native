@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TDh-Rw-FKy">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--HomeVC-->
+        <scene sceneID="Npl-SD-5Kf">
+            <objects>
+                <viewController id="TDh-Rw-FKy" customClass="HomeVC" customModule="DiabetesGeek" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b0i-LE-WMW"/>
+                        <viewControllerLayoutGuide type="bottom" id="yfz-9M-gzC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2RF-Q4-AW2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAZ-4x-5TV">
+                                <rect key="frame" x="277" y="289.5" width="46" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RFI-4O-EH1">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="2G5-k7-RPq"/>
+                                    <barButtonItem systemItem="add" id="Dcu-fB-Qlx" userLabel="Add">
+                                        <connections>
+                                            <action selector="createLogEntryPressed:" destination="TDh-Rw-FKy" id="XJn-On-pxq"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dAZ-4x-5TV" firstAttribute="centerX" secondItem="2RF-Q4-AW2" secondAttribute="centerX" id="5nC-0I-zpW"/>
+                            <constraint firstItem="RFI-4O-EH1" firstAttribute="leading" secondItem="2RF-Q4-AW2" secondAttribute="leading" id="AP9-Rr-mi2"/>
+                            <constraint firstItem="dAZ-4x-5TV" firstAttribute="centerY" secondItem="2RF-Q4-AW2" secondAttribute="centerY" id="BuE-Nt-95E"/>
+                            <constraint firstAttribute="trailing" secondItem="RFI-4O-EH1" secondAttribute="trailing" id="FvE-vF-9Us"/>
+                            <constraint firstItem="yfz-9M-gzC" firstAttribute="top" secondItem="RFI-4O-EH1" secondAttribute="bottom" id="U3L-cb-cDE"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1In-xY-gg4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="185" y="156"/>
+        </scene>
+    </scenes>
+</document>

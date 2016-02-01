@@ -1,19 +1,15 @@
 //
-//  LoginVC.swift
+//  EntryComputationVC.swift
 //  DiabetesGeek
 //
-//  Created by Jeff on 1/23/16.
+//  Created by Jeff Calog on 1/31/16.
 //  Copyright © 2016 Mostly Cloudy. All rights reserved.
 //
 
 import UIKit
 
-class LoginVC: UIViewController {
+class EntryComputationVC: UIViewController {
 
-    class func viewController() -> LoginVC? {
-        return UIStoryboard(name: "Login", bundle: nil).instantiateInitialViewController() as? LoginVC
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,15 +21,6 @@ class LoginVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func loginPressed(sender: AnyObject) {
-        if let homeVC = HomeVC.viewController() {
-            let navCtrl = UINavigationController(rootViewController: homeVC)
-            self.presentViewController(navCtrl, animated: true, completion: nil)
-        }
-        else {
-            print("Error: HomeVC not created")
-        }
-    }
 
     /*
     // MARK: - Navigation
