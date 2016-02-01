@@ -8,7 +8,7 @@
         <!--Create-->
         <scene sceneID="atO-y7-zty">
             <objects>
-                <viewController title="Create" id="k18-VD-7t3" customClass="CreateLogEntryVC" customModule="DiabetesGeek" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Create" modalPresentationStyle="pageSheet" id="k18-VD-7t3" customClass="CreateLogEntryVC" customModule="DiabetesGeek" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JU6-eW-XGJ"/>
                         <viewControllerLayoutGuide type="bottom" id="Vvb-fv-lFf"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fDU-nF-zwH">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Create" id="QmH-Bf-D7i">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="hZv-VG-l01">
@@ -35,21 +35,48 @@
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3KA-yj-ip4">
-                                <rect key="frame" x="279" y="289" width="42" height="21"/>
+                                <rect key="frame" x="279" y="289.5" width="42" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3dQ-rD-y4T">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="68i-hS-tZL"/>
+                                    <barButtonItem title="Test" id="jSs-Ya-pCJ" userLabel="Test">
+                                        <connections>
+                                            <action selector="testButtonPressed:" destination="k18-VD-7t3" id="mAV-45-ufB"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="fDU-nF-zwH" firstAttribute="leading" secondItem="iNX-q9-4G2" secondAttribute="leading" id="3rL-Uw-g0v"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fDU-nF-zwH" secondAttribute="trailing" constant="-20" id="9tr-Fl-avh"/>
                             <constraint firstItem="3KA-yj-ip4" firstAttribute="centerY" secondItem="iNX-q9-4G2" secondAttribute="centerY" id="PVA-dC-5cc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3dQ-rD-y4T" secondAttribute="trailing" constant="-20" id="Wqd-ff-lVS"/>
                             <constraint firstItem="3KA-yj-ip4" firstAttribute="centerX" secondItem="iNX-q9-4G2" secondAttribute="centerX" id="d7b-vw-ctS"/>
                             <constraint firstItem="fDU-nF-zwH" firstAttribute="top" secondItem="iNX-q9-4G2" secondAttribute="top" id="f2U-ye-ko7"/>
+                            <constraint firstItem="fDU-nF-zwH" firstAttribute="top" secondItem="iNX-q9-4G2" secondAttribute="topMargin" id="gAy-ez-Lfj"/>
+                            <constraint firstItem="3dQ-rD-y4T" firstAttribute="leading" secondItem="iNX-q9-4G2" secondAttribute="leadingMargin" constant="-20" id="uKt-uP-EPf"/>
+                            <constraint firstItem="fDU-nF-zwH" firstAttribute="top" secondItem="JU6-eW-XGJ" secondAttribute="bottom" id="weT-XY-TWB"/>
+                            <constraint firstItem="Vvb-fv-lFf" firstAttribute="top" secondItem="3dQ-rD-y4T" secondAttribute="bottom" id="wrl-J7-dvY"/>
                             <constraint firstAttribute="trailing" secondItem="fDU-nF-zwH" secondAttribute="trailing" id="xLO-kc-NeA"/>
+                            <constraint firstItem="fDU-nF-zwH" firstAttribute="leading" secondItem="iNX-q9-4G2" secondAttribute="leadingMargin" constant="-20" id="yz1-TW-qEg"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3rL-Uw-g0v"/>
+                                <exclude reference="f2U-ye-ko7"/>
+                                <exclude reference="gAy-ez-Lfj"/>
+                                <exclude reference="xLO-kc-NeA"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wae-nx-oHl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -217,8 +244,8 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="hao-Z3-bIf"/>
                                         <exclude reference="8XG-pz-JIW"/>
+                                        <exclude reference="hao-Z3-bIf"/>
                                         <exclude reference="TB6-Dr-Xik"/>
                                     </mask>
                                 </variation>

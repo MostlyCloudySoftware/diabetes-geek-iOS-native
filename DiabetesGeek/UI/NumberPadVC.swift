@@ -1,5 +1,5 @@
 //
-//  CreateLogEntryVC.swift
+//  NumberPadVC.swift
 //  DiabetesGeek
 //
 //  Created by Jeff Calog on 1/31/16.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-class CreateLogEntryVC: UIViewController {
+class NumberPadVC: UIViewController {
 
-    static func viewController() -> CreateLogEntryVC? {
-        return UIStoryboard(name: "CreateLogEntry", bundle: nil).instantiateInitialViewController() as? CreateLogEntryVC
+    static func viewController() -> NumberPadVC? {
+        return UIStoryboard(name: "NumberPad", bundle: nil).instantiateInitialViewController() as? NumberPadVC
     }
     
     override func viewDidLoad() {
@@ -26,21 +26,6 @@ class CreateLogEntryVC: UIViewController {
     }
     
 
-    @IBAction func saveButtonPressed(sender: AnyObject) {
-        print("saveButtonPressed")
-    }
-    
-    
-    @IBAction func cancelButtonPressed(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    @IBAction func testButtonPressed(sender: AnyObject) {
-        print("testButtonPressed")
-        if let numberPadVC = NumberPadVC.viewController() {
-            self.presentViewController(numberPadVC, animated: false, completion: nil)
-        }        
-    }
     /*
     // MARK: - Navigation
 
