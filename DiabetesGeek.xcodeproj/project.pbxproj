@@ -27,7 +27,11 @@
 		7C51461F1C5F2BC500E18B0F /* EntryComputationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C51461E1C5F2BC500E18B0F /* EntryComputationVC.swift */; };
 		7C5146221C5F34DD00E18B0F /* NumberPadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5146211C5F34DD00E18B0F /* NumberPadVC.swift */; };
 		7C5146241C5F351E00E18B0F /* NumberPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C5146231C5F351E00E18B0F /* NumberPad.storyboard */; };
-		7C5146261C5F397500E18B0F /* NumberPadKeysVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5146251C5F397500E18B0F /* NumberPadKeysVC.swift */; };
+		7C5146261C5F397500E18B0F /* NumberPadKeyCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5146251C5F397500E18B0F /* NumberPadKeyCVC.swift */; };
+		7CADEDCE1C65974900C24E14 /* Debug.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CADEDCD1C65974900C24E14 /* Debug.storyboard */; };
+		7CADEDD01C65976F00C24E14 /* DebugVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CADEDCF1C65976F00C24E14 /* DebugVC.swift */; };
+		7CADEDD41C65A40D00C24E14 /* NumerPadKeyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CADEDD31C65A40D00C24E14 /* NumerPadKeyCell.swift */; };
+		7CEECDAF1C67116300516771 /* NumberPadButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEECDAE1C67116300516771 /* NumberPadButtonType.swift */; };
 		CC7A1B33F23132A627A6C612 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D37D326FC44EB0D6DE20FC4 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -77,7 +81,11 @@
 		7C51461E1C5F2BC500E18B0F /* EntryComputationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryComputationVC.swift; sourceTree = "<group>"; };
 		7C5146211C5F34DD00E18B0F /* NumberPadVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberPadVC.swift; sourceTree = "<group>"; };
 		7C5146231C5F351E00E18B0F /* NumberPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NumberPad.storyboard; sourceTree = "<group>"; };
-		7C5146251C5F397500E18B0F /* NumberPadKeysVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberPadKeysVC.swift; sourceTree = "<group>"; };
+		7C5146251C5F397500E18B0F /* NumberPadKeyCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberPadKeyCVC.swift; sourceTree = "<group>"; };
+		7CADEDCD1C65974900C24E14 /* Debug.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Debug.storyboard; sourceTree = "<group>"; };
+		7CADEDCF1C65976F00C24E14 /* DebugVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugVC.swift; sourceTree = "<group>"; };
+		7CADEDD31C65A40D00C24E14 /* NumerPadKeyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumerPadKeyCell.swift; sourceTree = "<group>"; };
+		7CEECDAE1C67116300516771 /* NumberPadButtonType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberPadButtonType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +198,7 @@
 		1F43823A1C547547001DDF30 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				7CADEDCC1C65973400C24E14 /* Debug */,
 				7C5146201C5F34BD00E18B0F /* NumberPad */,
 				7C2801E01C5F169E009F6788 /* CreateLogEntry */,
 				7C2801DB1C5F118F009F6788 /* Home */,
@@ -231,9 +240,20 @@
 			children = (
 				7C5146211C5F34DD00E18B0F /* NumberPadVC.swift */,
 				7C5146231C5F351E00E18B0F /* NumberPad.storyboard */,
-				7C5146251C5F397500E18B0F /* NumberPadKeysVC.swift */,
+				7C5146251C5F397500E18B0F /* NumberPadKeyCVC.swift */,
+				7CADEDD31C65A40D00C24E14 /* NumerPadKeyCell.swift */,
+				7CEECDAE1C67116300516771 /* NumberPadButtonType.swift */,
 			);
 			name = NumberPad;
+			sourceTree = "<group>";
+		};
+		7CADEDCC1C65973400C24E14 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				7CADEDCD1C65974900C24E14 /* Debug.storyboard */,
+				7CADEDCF1C65976F00C24E14 /* DebugVC.swift */,
+			);
+			name = Debug;
 			sourceTree = "<group>";
 		};
 		A13C932DE6355AA222712752 /* Frameworks */ = {
@@ -366,6 +386,7 @@
 				1F4382461C54755C001DDF30 /* Login.storyboard in Resources */,
 				1F36F32B1C54585C00F8C8D7 /* Assets.xcassets in Resources */,
 				1F36F3291C54585C00F8C8D7 /* Main.storyboard in Resources */,
+				7CADEDCE1C65974900C24E14 /* Debug.storyboard in Resources */,
 				7C5146241C5F351E00E18B0F /* NumberPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,12 +463,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F36F3261C54585C00F8C8D7 /* ViewController.swift in Sources */,
+				7CEECDAF1C67116300516771 /* NumberPadButtonType.swift in Sources */,
 				7C5146221C5F34DD00E18B0F /* NumberPadVC.swift in Sources */,
 				7C51461F1C5F2BC500E18B0F /* EntryComputationVC.swift in Sources */,
 				1F36F3241C54585C00F8C8D7 /* AppDelegate.swift in Sources */,
 				7C2801E21C5F16D7009F6788 /* CreateLogEntryVC.swift in Sources */,
 				7C2801DF1C5F121F009F6788 /* HomeVC.swift in Sources */,
-				7C5146261C5F397500E18B0F /* NumberPadKeysVC.swift in Sources */,
+				7C5146261C5F397500E18B0F /* NumberPadKeyCVC.swift in Sources */,
+				7CADEDD01C65976F00C24E14 /* DebugVC.swift in Sources */,
+				7CADEDD41C65A40D00C24E14 /* NumerPadKeyCell.swift in Sources */,
 				1F43824A1C54758D001DDF30 /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

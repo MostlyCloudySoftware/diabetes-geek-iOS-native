@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sr8-62-c5Z">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--DebugVC-->
+        <scene sceneID="yjU-En-FHJ">
+            <objects>
+                <viewController id="sr8-62-c5Z" customClass="DebugVC" customModule="DiabetesGeek" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="frG-zs-fyq"/>
+                        <viewControllerLayoutGuide type="bottom" id="g8N-NK-L4t"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zeC-Vz-zdY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jRj-ex-KCp">
+                                <rect key="frame" x="197" y="238" width="206" height="125"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9r-zW-aWM">
+                                        <rect key="frame" x="0.0" y="0.0" width="206" height="30"/>
+                                        <state key="normal" title="Number Pad"/>
+                                        <connections>
+                                            <action selector="numberPadButtonPressed:" destination="sr8-62-c5Z" eventType="touchUpInside" id="oEX-RV-e9u"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJE-HL-N1Q">
+                                        <rect key="frame" x="0.0" y="47.5" width="206" height="30"/>
+                                        <state key="normal" title="Button2"/>
+                                        <connections>
+                                            <action selector="button2Pressed:" destination="sr8-62-c5Z" eventType="touchUpInside" id="shp-YX-o76"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZE5-sj-edQ">
+                                        <rect key="frame" x="0.0" y="95" width="206" height="30"/>
+                                        <state key="normal" title="Button3"/>
+                                        <connections>
+                                            <action selector="button3Pressed:" destination="sr8-62-c5Z" eventType="touchUpInside" id="KvA-QV-w4i"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="3S7-NE-8Jy"/>
+                                    <constraint firstAttribute="width" constant="206" id="bQC-2b-1t0"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jRj-ex-KCp" firstAttribute="centerY" secondItem="zeC-Vz-zdY" secondAttribute="centerY" id="Et2-gk-4hq"/>
+                            <constraint firstItem="jRj-ex-KCp" firstAttribute="centerX" secondItem="zeC-Vz-zdY" secondAttribute="centerX" id="fht-1b-phn"/>
+                            <constraint firstItem="jRj-ex-KCp" firstAttribute="centerX" secondItem="zeC-Vz-zdY" secondAttribute="centerX" id="uNS-OI-si2"/>
+                            <constraint firstItem="jRj-ex-KCp" firstAttribute="centerY" secondItem="zeC-Vz-zdY" secondAttribute="centerY" id="zQq-zL-Rwg"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="uNS-OI-si2"/>
+                                <exclude reference="zQq-zL-Rwg"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="button2" destination="JJE-HL-N1Q" id="lRc-Jt-kW1"/>
+                        <outlet property="button3" destination="ZE5-sj-edQ" id="ruC-qA-J4p"/>
+                        <outlet property="numberPad" destination="f9r-zW-aWM" id="LgN-wV-V87"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J6J-Cs-akn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="492" y="197"/>
+        </scene>
+    </scenes>
+</document>

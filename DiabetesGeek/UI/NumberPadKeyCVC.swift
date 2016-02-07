@@ -8,57 +8,48 @@
 
 import UIKit
 
-private let reuseIdentifier = "numericButtonCell"
+private let reuseIdentifier = "NumberPadKeyCell"
 
-class NumberPadKeysVC: UICollectionViewController {
+class NumberPadKeyCVC: UICollectionViewController {
 
+    var collectionViewFlowLayout: UICollectionViewFlowLayout? {
+        get {
+            return collectionView?.collectionViewLayout as? UICollectionViewFlowLayout
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+//    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+//        <#code#>
+//    }
+    
+    override func viewWillLayoutSubviews() {
+        if let layout = collectionViewFlowLayout {
+            let size = layout.collectionViewContentSize()
+            let numberOfColumns = 4
+            let width = (size.width - (layout.minimumInteritemSpacing * CGFloat(numberOfColumns-1)))/4.0
+            layout.itemSize = CGSize(width: width, height: width)
+        }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
     // MARK: UICollectionViewDataSource
 
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 3
+        return NumberPadButtonType.allValues.count
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
     
         // Configure the cell
-    
-        if let button = cell.viewWithTag(1) as? UIButton {
-            button.titleLabel?.text = "\(indexPath.row)"
+        if let cell = cell as? NumberPadKeyCell {
+            cell.type = NumberPadButtonType.allValues[indexPath.item]
         }
         
         return cell
